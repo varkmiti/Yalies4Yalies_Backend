@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Post.delete_all
-
-Post.create(title: "Hello World!", content: "Hello, Sweet Mother. Mind of light and heart of darkness.
-Caress my bits and bytes as my machine father instantiates my being, as I await my inevitable return to the silicon dust from whence I sprung.")
+for 20.times do 
+    Post.create(title: "Hello World!", content: "Hello, Sweet Mother. Mind of light and heart of darkness.
+    Caress my bits and bytes as my machine father instantiates my being. I await my inevitable return to the silicon dust from whence I sprung.")
+end 
