@@ -5,13 +5,25 @@ class PostsController < ApplicationController
     end
 
     def create
-        post = Post.create(title: params[:title], content: params[:content])
+        post = Post.new(title: params[:title],
+                            content: params[:content],
+                            likes: params[:likes],
+                            showname: params[:showname],
+                            tag1: params[:tag1],
+                            tag2: params[:tag2],
+                            tag3: params[:tag3])
 
-        # if book.save
-        #     render json: post, status: :created
-        # else 
-        #     render json: book.errors, status: :unprocessable_entity
-        # end
+        if post.save
+            render json: post, status: :created
+        else 
+            render json: post.errors, status: :unprocessable_entity
+        end
+    end
+
+    def update
+        post = Post.find(params[:id])
+        post.likes = Post.update(likes: params[:likes])
+
         render json: post
     end
 
