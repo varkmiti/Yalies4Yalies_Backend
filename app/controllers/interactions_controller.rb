@@ -1,0 +1,3 @@
+class InteractionsController < ApplicationController
+    
+end
