@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_165714) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.text "content"
+    t.string "content"
     t.integer "likes"
     t.integer "student_id"
     t.string "tag1"
@@ -39,7 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_165714) do
 
   create_table "replies", force: :cascade do |t|
     t.string "content"
-    t.integer "student_id"
+    t.integer "user_id"
     t.integer "post_id"
     t.integer "likes"
     t.string "replyname"
