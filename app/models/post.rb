@@ -7,4 +7,8 @@ class Post < ApplicationRecord
     def self.order_by_time 
         Post.all.sort_by(&:created_at)
     end
+
+    def self.order_by_likes 
+        Post.all.sort_by(&:likes)
+    end
 end

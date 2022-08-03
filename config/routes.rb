@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :users
   resources :replies
   resources :posts
+  resources :sessions
 end

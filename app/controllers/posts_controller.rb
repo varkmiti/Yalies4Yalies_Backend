@@ -12,13 +12,7 @@ class PostsController < ApplicationController
     end
 
     def create
-        post = Post.new(title: params[:title],
-                            content: params[:content],
-                            likes: 0,
-                            postname: params[:postname],
-                            tag1: params[:tag1],
-                            tag2: params[:tag2],
-                            tag3: params[:tag3])
+        post = Post.new(post_params)
 
         if post.save
             render json: post, status: :created
@@ -28,15 +22,15 @@ class PostsController < ApplicationController
     end
 
     def update
+        
         post = Post.find(params[:id])
-        post.likes = Post.update(likes: params[:likes])
-
+        post.update(likes: params[:likes])
         render json: post
     end
 
     private 
 
-    # def post_params 
-    #     params.require(:post).permit(:title, :student_id, :content, :created_at)
-    # end
+    def post_params 
+        params.require(:post).permit(:title, :user_id, :content, :created_at, :likes, :postname, :tag1, :tag2, :tag3)
+    end
 end
