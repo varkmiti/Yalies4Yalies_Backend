@@ -13,3 +13,6 @@ end
 
 Reply.delete_all
 Reply.create(content: "lmao", post_id: 2)
+
+User.delete_all
+User.create(username: "Mark", email: "mark.viti@yale.edu", password: "1234", password_confirmation: "1234", major: "Math", college: "BF")

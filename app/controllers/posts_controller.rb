@@ -22,9 +22,9 @@ class PostsController < ApplicationController
     end
 
     def update
-        
         post = Post.find(params[:id])
-        post.update(likes: params[:likes])
+        # post.update(likes: params[:likes])
+        post.update(content: params[:content])
         render json: post
     end
 

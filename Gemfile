@@ -7,6 +7,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'byebug'
 
+gem 'jwt', '~> 1.4.0'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
