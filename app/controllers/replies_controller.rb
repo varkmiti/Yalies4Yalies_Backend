@@ -5,7 +5,7 @@ class RepliesController < ApplicationController
     end
 
     def create
-        reply = Reply.create(content: params[:content], post_id: params[:post_id])
+        reply = Reply.create(content: params[:content], post_id: params[:post_id], replyname: params[:replyname])
 
         render json: reply
     end

@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_165714) do
     t.string "title"
     t.string "content"
     t.integer "likes"
-    t.integer "student_id"
+    t.integer "user_id"
     t.string "tag1"
     t.string "tag2"
     t.string "tag3"

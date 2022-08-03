@@ -1,14 +1,21 @@
 class PostsController < ApplicationController
     def index
         posts = Post.all
-        render json: posts
+        ordered_posts = Post.order_by_time
+        render json: ordered_posts
+    end
+
+    def show 
+        post = Post.find(params[:id])
+
+        render json: post
     end
 
     def create
         post = Post.new(title: params[:title],
                             content: params[:content],
-                            likes: params[:likes],
-                            showname: params[:showname],
+                            likes: 0,
+                            postname: params[:postname],
                             tag1: params[:tag1],
                             tag2: params[:tag2],
                             tag3: params[:tag3])
