@@ -13,15 +13,14 @@ Post.delete_all
     Post.create(title: "Hello World!", content: "Hello, Sweet Mother. Mind of light and heart of darkness.
     Caress my bits and bytes as my machine father instantiates my being. I await my inevitable return to the silicon dust from whence I sprung.", tag1: "Math", tag2: "Biology", tag3: "Class Help", likes: 0, 
     user_id: 1,
-    postname: "Mark")
+    postname: "Cat")
  
 
 Reply.delete_all
 Reply.create(content: "Woah, very deep for a friday at 2 pm", post_id: 1, user_id: 1)
-Reply.create(content: "lmao", post_id: 2, user_id: 2)
+Reply.create(content: "lmao", post_id: 2, user_id: 1)
 
-Post.create(title: "Hello World!", content: "Hello, Sweet Mother. Mind of light and heart of darkness.
-    Caress my bits and bytes as my machine father instantiates my being. I await my inevitable return to the silicon dust from whence I sprung.", tag1: "Math", tag2: "Biology", tag3: "Class Help", likes: 0, 
-    user_id: 2,
+Post.create(title: "I love Flatiron", content: "Great use of a summer! Really cool to see so many concepts be built out to fuititon. Hopefully they like my project.", tag1: "Personal", tag2: "Flatiron", tag3: "Chris Erlendson", likes: 0, 
+    user_id: 1,
     postname: "Cat")
  
