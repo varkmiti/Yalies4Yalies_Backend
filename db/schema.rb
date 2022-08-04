@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_165714) do
     t.string "tag2"
     t.string "tag3"
     t.string "postname"
+    t.boolean "view_replies"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

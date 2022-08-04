@@ -11,9 +11,15 @@ class RepliesController < ApplicationController
     end
 
     def create
-        reply = Reply.create(reply_params)
+        @reply = Reply.create(reply_params)
 
-        render json: reply
+        @post = Post.find(params[:post_id])
+        @user = User.find(@post.user_id)
+        if @post.view_replies == true
+            UserMailer.with(user: @user, reply: @reply ).new_reply.deliver_later
+        end 
+
+        render json: @reply
     end
 
     def update 

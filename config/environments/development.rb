@@ -1,6 +1,54 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+
+      config.action_mailer.delivery_method = :smtp
+      host = 'localhost:3000'
+      config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+
+    # SMTP settings for gmail
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :user_name            => "yalies4yalies",
+      :password             => 'tprojqhkibtxzmrk',
+      :authentication       => "plain",
+      :enable_starttls_auto => true
+    }
+
+    #   config.action_mailer.delivery_method = :sendmail
+    # # Defaults to:
+    # # config.action_mailer.sendmail_settings = {
+    # #   location: '/usr/sbin/sendmail',
+    # #   arguments: '-i'
+    # # }
+    # config.action_mailer.perform_deliveries = true
+    # config.action_mailer.raise_delivery_errors = true
+    # config.action_mailer.default_options = {from: 'yalies4yalies@gmail.com'}
+
+    # config.action_mailer.delivery_method = :smtp
+    # config.action_mailer.smtp_settings = {
+    # address:              'smtp.gmail.com',
+    # port:                 587,
+    # domain:               'http://localhost:3000/',
+    # user_name:            'yalies4yalies',
+    # password:             'tprojqhkibtxzmrk',
+    # authentication:       'plain',
+    # enable_starttls_auto: true  }
+
+    #   config.action_mailer.delivery_method = :smtp
+    #   host = 'localhost:3000'
+    #   config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+
+    # # SMTP settings for gmail
+    # config.action_mailer.smtp_settings = {
+    #   :address              => "smtp.gmail.com",
+    #   :port                 => 587,
+    #   :user_name            => "yalies4yalies",
+    #   :password             => "y1a2l3i4e5s64yalies",
+    #   :authentication       => "plain",
+    #   :enable_starttls_auto => true
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
