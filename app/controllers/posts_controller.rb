@@ -23,14 +23,13 @@ class PostsController < ApplicationController
 
     def update
         post = Post.find(params[:id])
-        # post.update(likes: params[:likes])
-        post.update(content: params[:content])
+        post.update(content: params[:content], likes: params[:likes])
         render json: post
     end
 
     private 
 
     def post_params 
-        params.require(:post).permit(:title, :user_id, :content, :created_at, :likes, :postname, :tag1, :tag2, :tag3)
+        params.permit(:title, :user_id, :content, :created_at, :likes, :postname, :tag1, :tag2, :tag3)
     end
 end

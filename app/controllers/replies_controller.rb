@@ -11,7 +11,7 @@ class RepliesController < ApplicationController
     end
 
     def create
-        reply = Reply.create(content: params[:content], post_id: params[:post_id], replyname: params[:replyname], user_id: params[:user_id])
+        reply = Reply.create(reply_params)
 
         render json: reply
     end
@@ -21,5 +21,11 @@ class RepliesController < ApplicationController
         reply.update(content: params[:content])
 
         render json: reply
+    end
+
+    private 
+
+    def reply_params 
+        params.permit(:content, :post_id, :replyname, :user_id)
     end
 end

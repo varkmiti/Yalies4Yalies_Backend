@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
     has_many :replies
     belongs_to :user, optional: true
+    has_many :interactions
     # validates :title, presence: true
     # validates :content, prescence: true
 
