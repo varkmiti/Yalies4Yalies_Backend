@@ -27,7 +27,7 @@ post3 = Post.create(title: "I need help in Econ 115!", content: "Steve talks to 
     postname: "Jerry",
     score: 0)
 
-post4 = Post.create(title: "I've got a huge crush on Chris Erlendson", content: "He's a great teacher. I'm so glad I met him. Love his new haircut", tag1: "Personal", tag2: "Chris Erlendson", tag3: "Flatiron", likes: 15,
+post4 = Post.create(title: "I've got a huge crush on Chris Erlendson", content: "He's a great teacher. I'm so glad I met him. Love his new haircut", tag1: "Personal", tag2: "Chris Erlendson", tag3: "Flatiron", likes: 0,
     user_id: user1.id,
     postname: "Chris Erlendson Lover44",
     score: 0)
