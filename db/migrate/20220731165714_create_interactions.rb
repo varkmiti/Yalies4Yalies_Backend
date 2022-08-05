@@ -4,7 +4,6 @@ class CreateInteractions < ActiveRecord::Migration[7.0]
       t.string :occured
       t.string :user_id
       t.string :post_id
-      t.string :tag
 
       t.timestamps
     end

@@ -18,7 +18,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_165714) do
     t.string "occured"
     t.string "user_id"
     t.string "post_id"
-    t.string "tag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -24,7 +24,7 @@ class InteractionsController < ApplicationController
     private
 
     def interaction_params
-        params.permit(:user_id, :post_id, :occured)
+        params.permit(:interaction, :user_id, :post_id, :occured)
     end
 
 end
