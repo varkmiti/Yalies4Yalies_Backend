@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_165714) do
   enable_extension "plpgsql"
 
   create_table "interactions", force: :cascade do |t|
-    t.string "type"
+    t.string "occured"
     t.string "user_id"
     t.string "post_id"
     t.string "tag"
@@ -33,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_165714) do
     t.string "tag3"
     t.string "postname"
     t.boolean "view_replies"
+    t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

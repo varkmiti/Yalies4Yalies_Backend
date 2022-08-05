@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
     def index
         posts = Post.all
-        ordered_posts = Post.order_by_time
+        ordered_posts = Post.dynamic_ordering
         render json: ordered_posts
     end
 
@@ -30,6 +30,6 @@ class PostsController < ApplicationController
     private 
 
     def post_params 
-        params.permit(:title, :user_id, :content, :created_at, :likes, :postname, :tag1, :tag2, :tag3, :view_replies)
+        params.permit(:title, :user_id, :content, :created_at, :likes, :postname, :tag1, :tag2, :tag3, :view_replies, :score)
     end
 end

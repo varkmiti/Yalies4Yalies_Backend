@@ -10,6 +10,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :tag3
       t.string :postname
       t.boolean :view_replies
+      t.integer :score
       
 
       t.timestamps
